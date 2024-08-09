@@ -1,7 +1,7 @@
 import { HttpException } from "../../core/utils";
 import { BooksService } from "../books";
 import { StoresService } from "../stores";
-import { InsertStoreBookDto } from "./dto";
+import { FindStoreBooksDto, InsertStoreBookDto } from "./dto";
 import { StoreBook } from "./store-book.schema";
 
 export class StoreBooksService {
@@ -28,5 +28,10 @@ export class StoreBooksService {
     }
 
     await StoreBook.create(body);
+  }
+
+  async findMany(query: FindStoreBooksDto) {
+    const storeBooks = await StoreBook.find({ store_id: query.store_id });
+    return { storeBooks };
   }
 }

@@ -1,6 +1,6 @@
-import { Body, JsonController, OnUndefined, Post } from "routing-controllers";
+import { Body, Get, JsonController, OnUndefined, Post, QueryParams } from "routing-controllers";
 import { StoreBooksService } from "./store-books.service";
-import { InsertStoreBookDto } from "./dto";
+import { FindStoreBooksDto, InsertStoreBookDto } from "./dto";
 import { BooksService } from "../books";
 import { StoresService } from "../stores";
 import { AuthorsService } from "../authors";
@@ -17,5 +17,10 @@ export class StoreBooksController {
   @OnUndefined(STATUS_CODES.CREATED)
   async insertOne(@Body() body: InsertStoreBookDto) {
     await this.service.insertOne(body);
+  }
+
+  @Get()
+  async findMany(@QueryParams() query: FindStoreBooksDto) {
+    return this.service.findMany(query);
   }
 }
