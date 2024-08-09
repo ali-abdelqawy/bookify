@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "scripts": {
+    "start": "node -r @swc-node/register src/index.ts",
     "dev": "node -r @swc-node/register --watch src/index.ts",
     "dock:purge": "docker rm bookify-api",
     "dock:build": "docker build -t bookify-api .",
