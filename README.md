@@ -4,4 +4,5 @@
 <br />
 `cd bookify`
 <br />
+`copy example.env to .env`
 `npm run dock:up`
