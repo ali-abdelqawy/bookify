@@ -5,4 +5,8 @@ export class AuthorsService {
   async insertOne(body: InsertAuthorDto) {
     await Author.create(body);
   }
+
+  async exists(filter: any) {
+    return Author.exists(filter);
+  }
 }
