@@ -1,0 +1,19 @@
+{
+  "name": "bookify",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ali-abdelqawy/bookify.git"
+  },
+  "author": "Ali Khaled",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ali-abdelqawy/bookify/issues"
+  },
+  "homepage": "https://github.com/ali-abdelqawy/bookify#readme",
+  "description": ""
+}
