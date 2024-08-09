@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node -r @swc-node/register --watch src/index.ts",
+    "dock:purge": "docker rm bookify-api",
+    "dock:build": "docker build -t bookify-api .",
+    "dock:up": "docker-compose up"
   },
   "repository": {
     "type": "git",
