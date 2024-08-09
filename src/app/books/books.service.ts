@@ -17,4 +17,8 @@ export class BooksService {
     }
     await Book.create(body);
   }
+
+  async exists(filter: any) {
+    return Book.exists(filter);
+  }
 }
